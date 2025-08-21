@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* Css Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #f9f7f3;
+    box-shadow: 2px;
+    padding: 5px 40px;
+    box-shadow: -1px 2px 3px 0px rgba(150,150,150,0.5);
+-webkit-box-shadow: -1px 2px 3px 0px rgba(150,150,150,0.5);
+-moz-box-shadow: -1px 2px 3px 0px rgba(150,150,150,0.5);
+border-radius: 5px;
+}
+
+.header > p {
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 4px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fab089;
+    min-height: 700px;
+}
+
+.action {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.action>button {
+    background-color: #0fa3b1;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    font-size: 14px;
+}
+
+.books-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px;
+}
+
+.book {
+    width: 270px;
+    /* border: 1px solid black; */
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 12px;
+    background-color: #eddea4;
+}
+
+
+
+.footer {
+    background-color: #f9f7f3;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > p {
+    font-style: italic;
+}
