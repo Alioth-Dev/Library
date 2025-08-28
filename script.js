@@ -17,13 +17,34 @@ closeBtn.addEventListener("click", () => {
 const myLibrary = [
 
   {
-  title: "UV - The Love Story",
-  author: "Utkarsh Yadav",
-  pages: "234",
-  status: "Not Read",
-  uniqueId: "uv22"
+    "title": "Naruto",
+    "author": "Masashi Kishimoto",
+    "pages": "187",
+    "status": "Read",
+    "uniqueId": "nar001"
+  },
+  {
+    "title": "One Piece",
+    "author": "Eiichiro Oda",
+    "pages": "206",
+    "status": "Read",
+    "uniqueId": "op005"
+  },
+  {
+    "title": "Attack on Titan",
+    "author": "Hajime Isayama",
+    "pages": "192",
+    "status": "Not Read",
+    "uniqueId": "aot003"
+  },
+  {
+    "title": "Demon Slayer",
+    "author": "Koyoharu Gotouge",
+    "pages": "180",
+    "status": "Read",
+    "uniqueId": "ds002"
   }
-  
+
 ];
 
 
@@ -54,17 +75,11 @@ function addBookToLibrary(title, author, pages, status) {
 // Function to Delete Books from Frontent and Backend Both
 
 function deleteBooks(bookId) {
-  // alert("mmmm")
-  // console.log(bookId);
-  
+
   let tempBook = document.querySelector(`[data-uid="${bookId}"]`)
-  console.log(tempBook)
-  // tempBook.remove()
-  // alert("mmmm")
 
   myLibrary.forEach((tempBook, index) => {
     if(tempBook.uniqueId == bookId) {
-      // alert("found")
       myLibrary.splice(index, 1)
       console.log(myLibrary)
     }
@@ -111,7 +126,7 @@ function displayBooks() {
     const book = document.createElement("div")
     book.classList.add("book")
     book.setAttribute("data-uid", `${myLibrary[index].uniqueId}`)
-    book.innerHTML = `<h3>${myLibrary[index].title}</h3> <p>By ${myLibrary[index].author}</p> <p>Pages: ${myLibrary[index].pages}</p> <p>Status: ${myLibrary[index].status}</p> <div class="button-group">
+    book.innerHTML = `<h3>${myLibrary[index].title}</h3> <p>Author: ${myLibrary[index].author}</p> <p>Pages: ${myLibrary[index].pages}</p> <p>Status: ${myLibrary[index].status}</p> <div class="button-group">
             <button class="status" onclick="changeStatus('${myLibrary[index].uniqueId}')">Change Status</button>
             <button class="delete" onclick="deleteBooks('${myLibrary[index].uniqueId}')">Delete</button>
            
@@ -156,7 +171,7 @@ bookForm.addEventListener("submit", (event) => {
 
 
         addBookToLibrary(titleOfBook.value, authorOfBook.value, numberOfPages.value, statusOfBook.value)
-        console.log(myLibrary)
+ 
 
        displayBooks()
 

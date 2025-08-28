@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 /* Css Reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Sour Gummy", sans-serif;
 }
 
 .header {
@@ -17,7 +19,7 @@
     box-shadow: -1px 2px 3px 0px rgba(150,150,150,0.5);
 -webkit-box-shadow: -1px 2px 3px 0px rgba(150,150,150,0.5);
 -moz-box-shadow: -1px 2px 3px 0px rgba(150,150,150,0.5);
-/* border-radius: 5px; */
+
 }
 
 .header > p {
@@ -42,7 +44,7 @@
 }
 
 .action>button {
-    background-color: #66C7F4;
+    background-color: #18b5fd;
     color: #ffffff;
     padding: 10px 15px;
     border: none;
@@ -53,40 +55,51 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 30px;
+    gap: 35px;
     flex-wrap: wrap;
     width: 100%;
-    padding: 30px;
+    padding: 30px 50px;
 }
 
 .book {
-    width: 270px;
-    /* border: 1px solid black; */
-    height: 150px;
+    width: 450px;
+    height: 200px;
     border-radius: 5px;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    padding: 12px;
+    padding: 20px;
     background-color: #C1CAD6;
+    border: 8px solid #000;
 }
 
+.book>h3 {
+    font-size: 25px;
+    /* font-family: "Pacifico", cursive; */
+    margin-bottom: 7px;
+}
+
+.book>p {
+    font-size: 18px;
+}
 
 .button-group {
     display: flex;
-    margin-top: 25px;
+    margin-top: 45px;
     justify-content: space-between;
 }
 
 
 .status {
-    padding: 2px 4px;
+    padding: 8px 16px;
     border-radius: 2px;
-    border: 1px solid black;
-    background-color: #66C7F4;
+    border: none;
+    color: #000;
+    background-color: #18b5fd;
 }
 .delete {
-    padding: 2px 4px;
+    padding: 8px 16px;
     border-radius: 2px;
-    border: 1px solid black;
+    border: none;
+    color: #000;
     background-color: #FF1053;
 }
 
@@ -108,7 +121,23 @@ dialog {
      width: 400px;
 }
 
+.add-new-book {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+   
+}
 
+
+.add-new-book > p {
+    font-size: 20px;
+}
+.close-button {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 20px;
+}
 dialog > form {
     
 }
@@ -156,7 +185,7 @@ input[type='text']:focus, input[type='number']:focus {
 }
 
 form > .form-row > button {
-    background-color: #66C7F4;
+    background-color: #18b5fd;
     color: #ffffff;
     padding: 7px 12px;
     border: none;
